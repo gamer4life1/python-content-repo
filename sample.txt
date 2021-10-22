@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/ki.css">
+  <script type="text/javascript">
+    var person = prompt("Please enter your name");
+
+    if (person != null) {
+      alert('Hey '+person);
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <h2 id="date"></h2>
+    <h4>Document Last Modified: <span id="datemod"></span></h4>
+  </div>
+  <script>
+    var today = new Date();
+    var Months = ['January', 'February', 'March', 'April', 
+                'May', 'June', 'July', 'August', 'September',
+                'October', 'November', 'December'];
+    var day = today.getDate();
+    let month = Months[today.getMonth()];
+    var year = today.getFullYear();
+    document.getElementById("date").innerHTML = month.toString().toUpperCase()+" "+day+", "+year;
+    document.getElementById("datemod").innerHTML = document.lastModified;
+    window.status = "Some text in the status bar!!";
+  </script>
+</body>
+</html>
